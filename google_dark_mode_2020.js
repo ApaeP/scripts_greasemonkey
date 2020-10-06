@@ -1,6 +1,5 @@
 // ==UserScript==
 // @name          DarkMode Google 2020
-// @last_update   Oct 6 2020 00:10
 // @description   will display google in dark mode, hide "translate this page"
 // @version       alpha
 // @author        ApaeP
@@ -20,79 +19,40 @@ let second_text_dark = '#9fa6ad';
 let third_text_dark = '#c4c8cc';
 
 const css = `
+
   /* Knowledge Panel */
-  .knowledge-panel {
-      background: ${main_dark} !important;
-      border: 1px solid ${border_dark} !important;
-  }
+  .knowledge-panel                                    { background: ${main_dark} !important; border: 1px solid ${border_dark} !important; }
+
   /* Hide 'save' button */
-  .IzNS7c.duf-h span {
-        display: none !important;
-  }
+  .IzNS7c.duf-h span                                  { display: none !important; }
 
 /* ============================================= */
 /* ============== SEARCH HOMEPAGE ============== */
 /* ============================================= */
   /* Top Right Links Menu*/
-  .gb_h .gb_g {
-      color: ${main_text_dark} !important;
-  }
-  .gb_h .gb_g:hover {
-      color: ${second_text_dark} !important;
-      text-decoration: none !important;
-  }
-  /* Top Right squares menu */
-  #gb#gb a.gb_D {
-      color: ${main_text_dark} !important;
-  }
-  #gb#gb a.gb_D:hover {
-      color: ${second_text_dark} !important;
-  }
+  .gb_h .gb_g                                         { color: ${main_text_dark} !important; }
+  .gb_h .gb_g:hover                                   { color: ${second_text_dark} !important; text-decoration: none !important; }
 
-  .jhp input[type="submit"], .sbdd_a input, .gbqfba {
-      background-image: none !important;
-  }
-  .tfB0Bf input[type="submit"], .gbqfba {
-      background: ${second_dark} !important;
-      border: none !important;
-      color: ${second_text_dark} !important;
-  }
-  .tfB0Bf input[type="submit"]:hover {
-      color: ${third_text_dark} !important;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 2px 8px !important;
-      border: 1px solid ${border_dark} !important;
-  }
-  #gbqfbb {
-      display: none;
-  }
+  /* Top Right squares menu */
+  #gb#gb a.gb_D                                       { color: ${main_text_dark} !important; }
+  #gb#gb a.gb_D:hover                                 { color: ${second_text_dark} !important; }
+
+  .jhp input[type="submit"], .sbdd_a input, .gbqfba   { background-image: none !important; }
+  .tfB0Bf input[type="submit"], .gbqfba               { background: ${second_dark} !important; border: none !important; color: ${second_text_dark} !important; }
+  .tfB0Bf input[type="submit"]:hover                  { color: ${third_text_dark} !important; box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 2px 8px !important; border: 1px solid ${border_dark} !important; }
+  #gbqfbb { display: none; }
 
   /* Search Suggestions */
-  .aajZCb {
-      background: ${main_dark} !important;
-  }
-  .sbhl {
-      background: ${second_dark} !important;
-  }
-  .sbl1 {
-      color: ${second_text_dark} !important;
-  }
-  .sbl1p {
-      color: ${main_text_dark} !important;
-  }
-  .RNmpXc, .JUypV, .lh87ke {
-      display: none;
-  }
+  .aajZCb                                             { background: ${main_dark} !important; }
+  .sbhl                                               { background: ${second_dark} !important; }
+  .sbl1                                               { color: ${second_text_dark} !important; }
+  .sbl1p                                              { color: ${main_text_dark} !important; }
+  .RNmpXc, .JUypV, .lh87ke                            { display: none; }
 
-  .EvHmz {
-      display: none;
-  }
+  .EvHmz                                              { display: none; }
 
-  #SIvCob {
-      color: ${second_text_dark} !important;
-  }
-  #SIvCob a {
-      color: ${link} !important;
-  }
+  #SIvCob                                             { color: ${second_text_dark} !important; }
+  #SIvCob a                                           { color: ${link} !important; }
 /* ============================================= */
 /* ============ SEARCH HOMEPAGE END ============ */
 /* ============================================= */
@@ -104,43 +64,24 @@ const css = `
 /* =============== SEARCH HEADER =============== */
 /* ============================================= */
   /* body background */
-  body {
-    background: ${main_dark} !important;
-  }
+  body                                                { background: ${main_dark} !important; }
 
   /* Searchbar Container */
-  .sfbg {
-    background: ${second_dark} !important;
-    height: 2000px;
-  }
+  .sfbg                                               { background: ${second_dark} !important; height: 2000px; }
 
   /* Searchbar */
-  .RNNXgb {
-    background: ${second_dark};
-    border: 1px solid ${border_dark};
-  }
+  .RNNXgb                                             { background: ${second_dark}; border: 1px solid ${border_dark}; }
 
   /* Searchbar Field */
-  .gLFyf.gsfi {
-    color: ${main_text_dark};
-  }
-  .FAuhyb {
-    color: ${main_text_dark};
-  }
+  .gLFyf.gsfi                                         { color: ${main_text_dark}; }
+  .FAuhyb                                             { color: ${main_text_dark}; }
 
   /* Searchbar modules menu */
-  #hdtb {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 2px 8px;
-    border-bottom: 0px;
-  }
-  #hdtbSum {
-    background: ${second_dark};
-  }
+  #hdtb                                               { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 2px 8px; border-bottom: 0px; }
+  #hdtbSum                                            { background: ${second_dark}; }
 
   /* Number of results in x seconds div */
-  #extabar > div {
-    background: ${main_dark};
-  }
+  #extabar > div                                      { background: ${main_dark}; }
 /* ================================================= */
 /* =============== SEARCH HEADER END =============== */
 /* ================================================= */
@@ -151,37 +92,23 @@ const css = `
 /* ================ SEARCH RESULTS ================ */
 /* ================================================ */
   /*  detailed links over the main link */
-  .iUh30.gBIQub {
-      color: ${second_text_dark};
-  }
-  .eFM0qc {
-      display: none !important;
-  }
+  .iUh30.gBIQub                                       { color: ${second_text_dark}; }
+  .eFM0qc                                             { display: none !important; }
 
   /* main link */
-  .LC20lb {
-      color: ${link};
-  }
+  .LC20lb                                             { color: ${link}; }
 
   /* Content preview */
-  .IsZvec {
-    color: ${second_text_dark};
-  }
+  .IsZvec                                             { color: ${second_text_dark}; }
 
   /* Content preview bold */
-  .aCOpRe em {
-    color: ${third_text_dark};
-  }
+  .aCOpRe em                                          { color: ${third_text_dark}; }
 
   /* Some links (I DONT KNOW WHERE) */
-  a.fl:link, .fl a, .gl a:link {
-    color: ${link};
-  }
+  a.fl:link, .fl a, .gl a:link                        { color: ${link}; }
 
   /* Some other links */
-  a.l {
-    color: ${link};
-  }
+  a.l                                                 { color: ${link}; }
 /* ================================================ */
 /* ================ SEARCH RESULTS ================ */
 /* ================================================ */
@@ -192,24 +119,16 @@ const css = `
 /* =============== OTHER ASKED QUESTIONS =============== */
 /* ===================================================== */
   /* bold elements for other asked questions content */
-  .hgKElc b {
-      color: ${third_text_dark};
-  }
+  .hgKElc b                                           { color: ${third_text_dark}; }
 
   /* link for researching the title of other answered question */
-  .iOBnre > a {
-      color: ${link};
-  }
+  .iOBnre > a                                         { color: ${link}; }
 
   /* "Plus" button if answer too long */
-  .truncation-information {
-      color: ${link} !important;
-  }
+  .truncation-information                             { color: ${link} !important; }
 
   /* Title of other answered question */
-  .cbphWd {
-      color: ${main_text_dark};
-  }
+  .cbphWd                                             { color: ${main_text_dark}; }
 /* ========================================================= */
 /* =============== OTHER ASKED QUESTIONS END =============== */
 /* ========================================================= */
@@ -219,33 +138,20 @@ const css = `
 /* =========================================== */
 /* =============== SONG LYRICS =============== */
 /* =========================================== */
-  .PZPZlf {
-      color: ${second_text_dark};
-  }
+  .PZPZlf                                             { color: ${second_text_dark}; }
 
   /* 'Lyrics' title */
-  .Ss2Faf.zbA8Me.mfMhoc.qLYAZd {
-      color: ${main_text_dark};
-  }
+  .Ss2Faf.zbA8Me.mfMhoc.qLYAZd                        { color: ${main_text_dark}; }
 
   /* 'more' btn */
-  .ujudUb.WRZytc a {
-      color: ${link};
-  }
+  .ujudUb.WRZytc a                                    { color: ${link}; }
 
   /* links for webplayers */
-  .RJuLSb tr td .ellip .Eegi6c span {
-      color: ${link};
-  }
-  .RJuLSb tr td a:hover {
-      text-decoration: none;
-      color: red;
-  }
+  .RJuLSb tr td .ellip .Eegi6c span                   { color: ${link}; }
+  .RJuLSb tr td a:hover                               { text-decoration: none; color: red; }
 
   /* Other records for this title */
-  .rl_item_base {
-      background: ${main_dark} !important;
-  }
+  .rl_item_base                                       { background: ${main_dark} !important; }
 /* =============================================== */
 /* =============== SONG LYRICS END =============== */
 /* =============================================== */
@@ -255,28 +161,25 @@ const css = `
 /* =============== VIDEO CARDS =============== */
 /* =========================================== */
 /* Video cards */
-.cv2VAd {
-    background: ${main_dark};
-    border: 1px solid ${second_text_dark} !important;
-}
+.cv2VAd                                               { background: ${main_dark}; border: 1px solid ${second_text_dark} !important; }
 /* =============================================== */
 /* =============== VIDEO CARDS END =============== */
 /* =============================================== */
 
 /*WHATS THAT??*/
-.di3YZe b {
-    color: ${third_text_dark};
-}
+.di3YZe b { color: ${third_text_dark}; }
+
+
 `
 
 function initDarkMode() {
-    // IN CSS BUT DOESNT SEEM TO WORK
+    // IN CSS BUT DOESNT SEEM TO WORK THERE
         // searchbar container
         document.querySelector('.sfbg').style.background = second_dark;
         // searchbar
         document.querySelector('.RNNXgb').style.background = second_dark;
         document.querySelector('.RNNXgb').style.border = `1px solid ${border_dark}`;
-        //  searchbar field
+        // searchbar field
         document.querySelector('.gLFyf.gsfi').style.color = main_text_dark;
         document.querySelector('.FAuhyb').style.color = main_text_dark;
 
